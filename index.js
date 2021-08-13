@@ -1,5 +1,6 @@
 /*
-  Do not change the line below. If you'd like to run code from this file, you may use the `exampleMovies` variable below to gain access to an array of movies.
+  Do not change the line below. If you'd like to run code from this file, you may use the `exampleMovies` variable below to gain access 
+  to an array of movies.
 
   Keep in mind that your functions must still have and use a parameter for accepting all movies.
 */
@@ -28,7 +29,12 @@ const exampleMovies = require("./movies");
       "James and the Giant Peach",
     ];
  */
-function getAllMovieTitles() {}
+function getAllMovieTitles(movies) {
+  //1. set up a movieTitle array to hold all movie titles.
+  //2. loop through movies array given to access each object.
+  //3. push title of each object in the movies array to movieTitle array that I setup in step.
+  //4. return movieTitle array. if full should contain all titles if empty will return empty movieTitle array.
+}
 
 /**
  * getHighestMetascore()
@@ -59,7 +65,8 @@ function getAverageIMDBRating() {}
 /**
  * countByRating()
  * -----------------------------
- * Returns an object where the keys are movie ratings and the values are the number of movies in the array with that rating. If the inputted `movies` array is empty, return `{}`.
+ * Returns an object where the keys are movie ratings and the values are the number of movies in the array with that rating. If the inputted `movies` array
+ * is empty, return `{}`.
  * @param {Object[]} movies - An array of movies. See the `movies.js` file for an example of this array.
  * @returns {Object} An object where keys are movie ratings (e.g. "PG") and the values are how many movies in the array have that rating (e.g. 7).
  *
