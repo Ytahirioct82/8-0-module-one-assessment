@@ -153,7 +153,15 @@ function countByRating(movies) {
       // Toy Story 4
     };
  */
-function findById() {}
+function findById(movies, id) {
+  // 1. Creat a variable movieId and have it = null
+  // 2. loop through each connected room id and extract corresponding name
+  // 3. find movie with imdbID matching input id
+  // 4. store object in movieId variable if id found.
+  // 5. if no id found return null
+  // 6. fetch movie title matching and asign it to variable movieId.
+  // 7. return array
+}
 
 /**
  * filterByGenre()
