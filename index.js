@@ -90,9 +90,14 @@ function getAverageIMDBRating(movies) {
     return 0;
   }
   //2. set up a total variable to = 0 .
+  let total = 0;
   //2. loop through movies array given to access each objects ibm rating.
-  //4. Attarat ibm rating to get total.
+  for (const movie of movies) {
+    //4. Attarat ibm rating to converted to number to get total.
+    total += Number(movie.imdbRating);
+  }
   //5. total = total divide by movies arry length
+
   //6. return total.
 }
 
