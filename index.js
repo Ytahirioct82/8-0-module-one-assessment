@@ -54,7 +54,7 @@ function getAllMovieTitles(movies) {
  *  //> 96
  */
 function getHighestMetascore(movies) {
-  //5. check if movies array is emptyand reasigne 0 to metascore if it is,
+  //0. check if movies array is emptyand reasigne 0 to metascore if it is,
   if (movies.length === 0) {
     return 0;
   }
@@ -86,6 +86,9 @@ function getHighestMetascore(movies) {
  */
 function getAverageIMDBRating(movies) {
   //1. chech if movies array is empty and return 0 if it is.
+  if (movies.length === 0) {
+    return 0;
+  }
   //2. set up a total variable to = 0 .
   //2. loop through movies array given to access each objects ibm rating.
   //4. Attarat ibm rating to get total.
