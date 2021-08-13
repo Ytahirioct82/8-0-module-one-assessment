@@ -257,15 +257,25 @@ function getBiggestBoxOfficeMovie(movies) {
   // 0. if the movies array is empty return 0
   if (movies.length === 0) {
     return null;
-
+  }
   // 1. Create highest variable that will hold the first boxOffice dollar amount as a number.
   let highest = movies[0].boxOffice.slice(1).replace(/,/g, "");
-  
+
   // 2. Create a variable that will store the output set it equal to an empty string
+  let nameOfMovie = "";
+
   // 3. loop through movies.
-  // 4. Create dollarNumber var that will convert boxOffice $ amount to a number.
-  // 5. Use conditionals to find highest amount
-  // 6. return nameOfMovie variable
+  for (const movie of movies) {
+    // 4. Create dollarNumber var that will convert boxOffice $ amount to a number.
+    const dollarNumber = Number(movie.boxOffice.slice(1).replace(/,/g, ""));
+    // 5. Use conditionals to find highest amount
+    if (dollarNumber > highest) {
+      highest = dollarNumber;
+      nameOfMovie = movie.title;
+    }
+  }
+  //6. return nameOfMovie variable
+  return nameOfMovie;
 }
 
 // Do not change anything below this line.
