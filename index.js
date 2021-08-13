@@ -54,18 +54,23 @@ function getAllMovieTitles(movies) {
  *  //> 96
  */
 function getHighestMetascore(movies) {
+  //5. check if movies array is emptyand reasigne 0 to metascore if it is,
+  if (movies.length === 0) {
+    return 0;
+  }
   //1. set up a metascore variable to hold the highest score and set it to equal the score of index 0 movies array, convet to Number.
-  let metascore = Number(movies[0].metascore);
+  let Highest = Number(movies[0].metascore);
+
   //2. set loop through movies array given to access each object.
   for (const movie of movies) {
     //3. use a conditional to check if each object score is higher the current metascore variable.
-    if (Number(movie.metascore) > metascore) {
+    if (Number(movie.metascore) > Highest) {
       //4. if higher asign it to metascore variable.
-      metascore = Number(movie.metascore);
+      Highest = Number(movie.metascore);
     }
   }
-  //5. check if metascore variable and return 0 if it is,
   //6. return metascore variable
+  return Highest;
 }
 
 /**
