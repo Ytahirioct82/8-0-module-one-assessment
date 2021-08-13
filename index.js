@@ -117,20 +117,20 @@ function getAverageIMDBRating(movies) {
  *  //> { G: 3, PG: 7 }
  */
 function countByRating(movies) {
+  //0. check if movies array is empty and return 0 to if it is,
   if (movies.length === 0) {
     return {};
   }
-  const obj = {};
-  for (const movie of movies) {
-    const key = movie.rated;
+  //1. set up a ratingsObject variable and have it = {}.
+  const ratingsObject = {};
 
-    if (key in obj) {
-      obj[key]++;
-    } else {
-      obj[key] = 1;
-    }
+  //2. set loop through movies array given to access each object.
+  for (const movie of movies) {
+    //3. creat a key Variable and assign it the rattings.
+    //4. if key is found in the ratingsObject, ratingsObject will = ratingsObject + 1 else ratingsObject = 1 .
   }
-  return obj;
+
+  //6. return ratingsObject variable.
 }
 
 /**
