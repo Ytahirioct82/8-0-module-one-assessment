@@ -186,7 +186,13 @@ function findById(movies, id) {
  *  filterByGenre(movies, "Horror")
  *  //> []
  */
-function filterByGenre() {}
+function filterByGenre(movies, genre) {
+  // 1. creat a foundGener variable that equals to empty array.
+  // 2. loop through movies.
+  // 3. find movie with genre matching input genre
+  // 4. store movie in foundGener
+  // 5. if no no movie found with matching gener return empty array will be empty
+}
 
 /**
  * getAllMoviesReleasedAtOrBeforeYear()
