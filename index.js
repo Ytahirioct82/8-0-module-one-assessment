@@ -127,10 +127,16 @@ function countByRating(movies) {
   //2. set loop through movies array given to access each object.
   for (const movie of movies) {
     //3. creat a key Variable and assign it the rattings.
-    //4. if key is found in the ratingsObject, ratingsObject will = ratingsObject + 1 else ratingsObject = 1 .
+    const key = movie.rated;
+    //4. if key is found in the ratingsObject, ratingsObject will = ratingsObject + 1 else ratingsObject = 1.
+    if (key in ratingsObject) {
+      ratingsObject[key]++;
+    } else {
+      ratingsObject[key] = 1;
+    }
   }
-
   //6. return ratingsObject variable.
+  return ratingsObject;
 }
 
 /**
