@@ -99,7 +99,7 @@ function getAverageIMDBRating(movies) {
   //5. total = total divide by movies arry length
   total = total / movies.length;
 
-  //6. return total.
+  //6. return total tofixed 2 and in number format.
 
   return Number(total.toFixed(2));
 }
@@ -116,7 +116,22 @@ function getAverageIMDBRating(movies) {
  *  countByRating(movies);
  *  //> { G: 3, PG: 7 }
  */
-function countByRating() {}
+function countByRating(movies) {
+  if (movies.length === 0) {
+    return {};
+  }
+  const obj = {};
+  for (const movie of movies) {
+    const key = movie.rated;
+
+    if (key in obj) {
+      obj[key]++;
+    } else {
+      obj[key] = 1;
+    }
+  }
+  return obj;
+}
 
 /**
  * findById()
