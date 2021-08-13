@@ -84,7 +84,14 @@ function getHighestMetascore(movies) {
  *  getAverageIMDBRating(movies);
  *  //> 7.76
  */
-function getAverageIMDBRating() {}
+function getAverageIMDBRating(movies) {
+  //1. chech if movies array is empty and return 0 if it is.
+  //2. set up a total variable to = 0 .
+  //2. loop through movies array given to access each objects ibm rating.
+  //4. Attarat ibm rating to get total.
+  //5. total = total divide by movies arry length
+  //6. return total.
+}
 
 /**
  * countByRating()
