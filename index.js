@@ -188,12 +188,16 @@ function findById(movies, id) {
  */
 function filterByGenre(movies, genre) {
   // 1. creat a foundGener variable that equals to empty array.
+  const foundGener = [];
   // 2. loop through movies.
-  // 3. find movie with genre matching input genre
-  // 4. store movie in foundGener
+  for (const movie of movies) {
+    // 3. find movie with genre matching input genre
+    if (movie.genre.includes(genre)) {
+    }
+    // 4. store movie object in foundGener
+  }
   // 5. if no no movie found with matching gener return empty array will be empty
 }
-
 /**
  * getAllMoviesReleasedAtOrBeforeYear()
  * -----------------------------
