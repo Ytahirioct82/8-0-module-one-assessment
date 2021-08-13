@@ -233,10 +233,13 @@ function getAllMoviesReleasedAtOrBeforeYear(movies, year) {
     // 3. use slice and number to access onlt the year in released.
     const yearNumber = Number(movie.released.slice(7));
     // 2. check if released` year is equal to or less than the given year
+    if (yearNumber <= year) {
+      // 4. store movie object in movieRelease array
+      movieRelease.push(movie);
+    }
   }
-
-  // 4. store movie object in movieRelease array
   // 5. if  no movie found with matching or less then the inputed year return empty array  else return obj.
+  return movieRelease;
 }
 
 /**
@@ -250,7 +253,15 @@ function getAllMoviesReleasedAtOrBeforeYear(movies, year) {
  *  getBiggestBoxOfficeMovie(movies);
  *  //> "Incredibles 2"
  */
-function getBiggestBoxOfficeMovie() {}
+function getBiggestBoxOfficeMovie(movies) {
+  // 0. if the movies array is empty return 0
+  // 1. Create highest variable that will hold the first boxOffice dollar amount as a number.
+  // 2. Create a variable that will store the output set it equal to an empty string
+  // 3. loop through movies.
+  // 4. Create dollarNumber var that will convert boxOffice $ amount to a number.
+  // 5. Use conditionals to find highest amount
+  // 6. return nameOfMovie variable
+}
 
 // Do not change anything below this line.
 module.exports = {
