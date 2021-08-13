@@ -35,9 +35,11 @@ function getAllMovieTitles(movies) {
   //2. loop through movies array given to access each object.
   for (const movie of movies) {
     //3. push title of each object in the movies array to movieTitle array that I setup in step.
+    movieTitle.push(movie.title);
   }
 
   //4. return movieTitle array. if full should contain all titles if empty will return empty movieTitle array.
+  return movieTitle;
 }
 
 /**
