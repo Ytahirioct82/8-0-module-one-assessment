@@ -31,8 +31,12 @@ const exampleMovies = require("./movies");
  */
 function getAllMovieTitles(movies) {
   //1. set up a movieTitle array to hold all movie titles.
+  let movieTitle = [];
   //2. loop through movies array given to access each object.
-  //3. push title of each object in the movies array to movieTitle array that I setup in step.
+  for (const movie of movies) {
+    //3. push title of each object in the movies array to movieTitle array that I setup in step.
+  }
+
   //4. return movieTitle array. if full should contain all titles if empty will return empty movieTitle array.
 }
 
