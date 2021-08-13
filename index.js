@@ -97,8 +97,11 @@ function getAverageIMDBRating(movies) {
     total += Number(movie.imdbRating);
   }
   //5. total = total divide by movies arry length
+  total = total / movies.length;
 
   //6. return total.
+
+  return Number(total.toFixed(2));
 }
 
 /**
