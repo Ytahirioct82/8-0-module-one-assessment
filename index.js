@@ -226,9 +226,15 @@ function filterByGenre(movies, genre) {
  */
 function getAllMoviesReleasedAtOrBeforeYear(movies, year) {
   // 0. creat a movieRelease variable that equals to empty array.
+  const movieRelease = [];
+
   // 1. loop through movies array
-  // 1. use slice and number to access onlt the year in released.
-  // 3. check if released` year is equal to or less than the given year
+  for (const movie of movies) {
+    // 3. use slice and number to access onlt the year in released.
+    const yearNumber = Number(movie.released.slice(7));
+    // 2. check if released` year is equal to or less than the given year
+  }
+
   // 4. store movie object in movieRelease array
   // 5. if  no movie found with matching or less then the inputed year return empty array  else return obj.
 }
