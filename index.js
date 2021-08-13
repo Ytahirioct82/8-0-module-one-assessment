@@ -154,13 +154,16 @@ function countByRating(movies) {
     };
  */
 function findById(movies, id) {
-  // 1. Creat a variable movieId and have it = null
-  // 2. loop through each connected room id and extract corresponding name
-  // 3. find movie with imdbID matching input id
-  // 4. store object in movieId variable if id found.
-  // 5. if no id found return null
-  // 6. fetch movie title matching and asign it to variable movieId.
-  // 7. return array
+  // 1. loop through each connected room id and extract corresponding name
+  for (const movie of movies) {
+    // 2. find movie with imdbID matching input id
+    if (movie.imdbID === id) {
+      //3. return movie object with the matching `imdbID`
+      return movie;
+    }
+    //4. return null if movie with imdbID is not found
+  }
+  return null;
 }
 
 /**
