@@ -255,7 +255,12 @@ function getAllMoviesReleasedAtOrBeforeYear(movies, year) {
  */
 function getBiggestBoxOfficeMovie(movies) {
   // 0. if the movies array is empty return 0
+  if (movies.length === 0) {
+    return null;
+
   // 1. Create highest variable that will hold the first boxOffice dollar amount as a number.
+  let highest = movies[0].boxOffice.slice(1).replace(/,/g, "");
+  
   // 2. Create a variable that will store the output set it equal to an empty string
   // 3. loop through movies.
   // 4. Create dollarNumber var that will convert boxOffice $ amount to a number.
